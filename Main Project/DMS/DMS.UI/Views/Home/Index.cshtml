@@ -1,5 +1,13 @@
 @model List<DMS.DAL.DatabaseContext.destination>
 
+<style>
+    .show-more {
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
 <div class="w3l_banner_info">
     <div class="slider">
         <div class="callbacks_container">
@@ -140,12 +148,13 @@
                 </div>
             </div>
         }
+        <div class="readmore-w3-agileits about-read show-more">
+            <a href="@Url.Action("beautifultours","Home")">Show More</a>
+        </div>
         <div class="clearfix"></div>
     </div>
-    <div class="readmore-w3-agileits about-read" >
-        <a href="@Url.Action("beautifultours","Home")">Show More</a>
-    </div>
 </div>
+
 <!-- //tours sectopn -->
 <!-- services -->
 <div class="wthree_services" id="services">

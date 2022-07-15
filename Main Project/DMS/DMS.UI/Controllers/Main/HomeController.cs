@@ -36,7 +36,6 @@ namespace DMS.Controllers
             return View();
         }
 
-
         public ActionResult Index()
         {
             List<destination> data = db.destinations.ToList();
@@ -51,16 +50,6 @@ namespace DMS.Controllers
         public ActionResult gallery()
         {
             ViewBag.Message = "Your gallery page.";
-            return View();
-        }
-        public ActionResult icons()
-        {
-            ViewBag.Message = "Your icons page.";
-            return View();
-        }
-        public ActionResult typography()
-        {
-            ViewBag.Message = "Your typography page.";
             return View();
         }
 

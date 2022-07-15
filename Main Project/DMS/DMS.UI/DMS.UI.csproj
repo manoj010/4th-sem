@@ -1504,6 +1504,7 @@
     <Folder Include="private\ExcelFormat\" />
     <Folder Include="private\Import\" />
     <Folder Include="Uploads\" />
+    <Folder Include="Views\Beautifultours\" />
     <Folder Include="Views\Menu\EditorTemplates\" />
   </ItemGroup>
   <ItemGroup>
