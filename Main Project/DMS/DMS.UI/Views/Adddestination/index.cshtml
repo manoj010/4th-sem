@@ -6,41 +6,82 @@
     Layout = "~/Views/Shared/adminlayout.cshtml";
 }
 
-<aside>
-    <div id="sidebar" class="nav-collapse">
-        <div class="leftside-navigation">
-            <ul class="sidebar-menu" id="nav-accordion">
-                <li class="sub-menu">
-                    <a href="javascript:;">
-                        <i class="fa fa-th"></i>
-                        <span>Data Tables</span>
-                    </a>
-                    <ul class="sub">
-                        <li><a href="@Url.Action("index","Adddestination")">Add Tour Records</a></li>
-                    </ul>
-                </li>
+<style>
+    .table-style{
+        border-collapse: collapse;
+        margin: 25px 0;
+        font-size: 0.9em;
+        min-width: 400px; 
+        border-radius: 5px;
+        overflow: hidden;
+    }
 
-                <li class="sub-menu">
-                    <a href="javascript:;">
-                        <i class="fa fa-glass"></i>
-                        <span>Gallery</span>
-                    </a>
-                    <ul class="sub">
-                        <li><a href="@Url.Action("index","Gallery")">Gallery</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </div>
-</aside>
+    .table-style th{
+        background-color: #009879;
+        color: #ffffff;
+        text-align: center;
+        font-weight: bold;
+        padding: 12px 15px;
+    }
+
+    .table-style td {
+        padding: 12px 15px;
+        text-align: center;
+        border-bottom: 2px solid #ffffff;
+    }
+
+        .table-style tr:nth-of-type(even) {
+            background-color: #c2c0c0;
+        }
+
+        .table-style tr:nth-of-type(odd) {
+            background-color: #d9d7d7;
+        }
+
+        .table-style tr:last-of-type {
+            border-bottom: 3px solid #009879;
+        }
+
+        .title{
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+    .btn a {
+        border-radius: 5px;
+        background: #009879;
+        display: inline-block;
+        text-decoration: none;
+        color: #fff;
+        font-size: 15px;
+        padding: 12px 20px;
+        transition: 0.5s all;
+        -webkit-transition: 0.5s all;
+        -moz-transition: 0.5s all;
+        -o-transition: 0.5s all;
+        -ms-transition: 0.5s all;
+    }
+
+    .btn a:hover {
+        color: #fff;
+        background: #000;
+        transition: 0.5s all;
+        -webkit-transition: 0.5s all;
+        -moz-transition: 0.5s all;
+        -o-transition: 0.5s all;
+        -ms-transition: 0.5s all;
+    }
+</style>
 
 <section id="main-content">
     <section class="wrapper">
-        <div class="row form-group" style="margin-top:150px;">
-            <h2>Index</h2>
-            <a href="@Url.Action("items","Adddestination")">Add a new record</a>
-
-            <table border="1">
+        <div class="row form-group">
+            <div class="title">Tours And Destinations Details</div>
+            <div class="btn">
+                <a href="@Url.Action("items","Adddestination")">Add a new record</a>
+            </div>
+            <table class="table-style">
                 <tr>
                     <th>ID</th>
                     <th>Name</th>
